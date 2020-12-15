@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start:dev": "nodemon -r esm ./index.js",
-    "start": "nodemon ./index.js --exec babel-node -e js"
+    "start": "nodemon ./index.js --exec babel-node -e js",
+    "debug:esm": "DEBUG=express:* node -r esm index.js",
+    "debug": "DEBUG=express:* nodemon ./index.js --exec babel-node -e js"
   },
   "repository": {
     "type": "git",
@@ -20,7 +22,9 @@
   "dependencies": {
     "esm": "^3.2.25",
     "express": "^4.17.1",
-    "nodemon": "^2.0.6"
+    "helmet": "^4.2.0",
+    "nodemon": "^2.0.6",
+    "serve-favicon": "^2.5.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
